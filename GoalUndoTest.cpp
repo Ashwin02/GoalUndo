@@ -88,7 +88,6 @@ TEST(GoalUndoTest, addOperation2BlankNameCheck)
 TEST(GoalUndoTest, addOperation2BlankGoalNameCheck)
 {
   GoalUndo obj;
-  //obj.addOperation("goal1","op1");
   obj.addOperation("op1");
 	ASSERT_EQ("op1",obj.getGoal());
 }
@@ -105,7 +104,6 @@ TEST(GoalUndoTest, undoOpertaionCheck)
 TEST(GoalUndoTest, undoOpertaionNoGoalCheck)
 {
   GoalUndo obj;
-  //obj.addOperation("","");
   obj.undoOperation();
 	ASSERT_EQ("",obj.getOperations());
 }
@@ -177,8 +175,6 @@ TEST(GoalUndoTest, undoOpertaion2OnlyGoalCheck)
 TEST(GoalUndoTest, undoOpertaion2NoGoalCheck)
 {
   GoalUndo obj;
-//  obj.addOperation("goal1","op1");
-//  obj.undoOperation("op1");
 	ASSERT_EQ("",obj.getGoal());
 }
 
